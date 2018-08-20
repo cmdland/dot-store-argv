@@ -2,7 +2,7 @@
 
 Parse CLI arguments with `dot-store`.
 
-![cli](http://i.imgur.com/pQT0l.gif)
+![cli](https://78.media.tumblr.com/caa52add01c3234286dc688852ef33e5/tumblr_op0623jfYh1v22rhuo1_500.gif)
 
 ## Create store
 
