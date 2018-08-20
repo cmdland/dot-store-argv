@@ -4,18 +4,24 @@ Parse CLI arguments with `dot-store`.
 
 ![cli](http://i.imgur.com/pQT0l.gif)
 
-The default function returns a store composer upon receiving a namespace prop:
+## Create store
 
 ```js
 import Store from "dot-store"
 import argv from "dot-store-argv"
 
-const store = argv("ns")(new Store())
+const store = argv("myApp")(new Store())
+```
 
-await store.set("ns.argv.alias", { world: ["w"] })
-await store.set("ns.argv.raw", ["hello", "-w"])
+## Parse argv
 
-store.get("ns.argv.parsed")
+Calling with `hello -w` options:
+
+```js
+await store.set("myApp.argv.alias", { world: ["w"] })
+await store.set("myApp.argv.raw", process.argv.slice(2))
+
+store.get("myApp.argv.parsed")
 // {
 //   _: ["hello"],
 //   w: true,
