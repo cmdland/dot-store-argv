@@ -15,7 +15,7 @@ const store = argv(new Store())
 
 ## Parse argv
 
-Calling with arguments "`hello -w`":
+Calling with arguments `hello -w`:
 
 ```js
 await store.set("argv.myApp.alias", { world: ["w"] })
@@ -28,3 +28,5 @@ store.get("argv.myApp.parsed")
 //   world: true,
 // }
 ```
+
+Substitute `myApp` for any key you like.
