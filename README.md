@@ -1,4 +1,4 @@
-# dot-store-argv
+# @dot-store/argv
 
 Parse CLI arguments with `dot-store`.
 
@@ -8,7 +8,7 @@ Parse CLI arguments with `dot-store`.
 
 ```js
 import Store from "dot-store"
-import argv from "dot-store-argv"
+import argv from "@dot-store/argv"
 
 const store = argv(new Store())
 ```
