@@ -7,10 +7,10 @@ Parse CLI arguments with `dot-store`.
 ## Create store
 
 ```js
-import Store from "dot-store"
+import createStore from "dot-store"
 import argv from "@dot-store/argv"
 
-const store = argv(new Store())
+const store = argv(createStore())
 ```
 
 ## Parse argv
@@ -18,15 +18,14 @@ const store = argv(new Store())
 Calling with arguments `hello -w`:
 
 ```js
-await store.set("argv.myApp.alias", { world: ["w"] })
-await store.set("argv.myApp.raw", process.argv.slice(2))
+await store.argv("options", process.argv.slice(2), {
+  alias: { world: ["w"] },
+})
 
-store.get("argv.myApp.parsed")
+store.get("options")
 // {
 //   _: ["hello"],
 //   w: true,
 //   world: true,
 // }
 ```
-
-Substitute `myApp` for any key you like.
