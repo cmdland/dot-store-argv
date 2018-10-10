@@ -27,7 +27,7 @@
   "license": "MIT",
   "homepage": "https://github.com/dot-store/argv#readme",
   "links": {
-    "@cyclops-tasks/npm": "../cyclops-npm"
+    "pkg-tasks": "../cyclops-npm"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
@@ -40,10 +40,10 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "@cyclops-tasks/npm": "^0.2.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^9.0.0",
-    "dot-store": "^4.6.0",
+    "dot-event": "^2.2.0",
+    "dot-store": "^5.2.0",
     "eslint": "^5.6.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^2.6.2",
@@ -51,6 +51,7 @@
     "husky": "1.0.0-rc.15",
     "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
+    "pkg-tasks": "^0.1.1",
     "prettier": "^1.14.3",
     "rimraf": "^2.6.2"
   },
