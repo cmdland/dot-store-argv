@@ -1,17 +1,5 @@
 {
   "name": "@dot-store/argv",
-  "starters": [
-    "basics",
-    "babel",
-    "babel-node",
-    "babel-scripts",
-    "eslint",
-    "husky",
-    "jest",
-    "jest-node",
-    "jest-scripts",
-    "watchman-babel"
-  ],
   "version": "2.2.0",
   "description": "Parse CLI arguments with dot-store",
   "keywords": [
@@ -26,9 +14,24 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/dot-store/argv#readme",
+  "cyclops": {
+    "version-tasks": {}
+  },
   "links": {
     "pkg-tasks": "../cyclops-npm"
   },
+  "starters": [
+    "basics",
+    "babel",
+    "babel-node",
+    "babel-scripts",
+    "eslint",
+    "husky",
+    "jest",
+    "jest-node",
+    "jest-scripts",
+    "watchman-babel"
+  ],
   "dependencies": {
     "@babel/runtime": "^7.1.2",
     "getopts": "^2.2.2"
