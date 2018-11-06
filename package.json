@@ -16,6 +16,7 @@
   "homepage": "https://github.com/dot-store/argv#readme",
   "cyclops": {
     "git-tasks": {},
+    "starter-tasks": {},
     "version-tasks": {}
   },
   "links": {
