@@ -1,7 +1,7 @@
 {
   "name": "dot-arg",
   "version": "2.3.0",
-  "description": "dot-event CLI argument operation",
+  "description": "dot-event argument parsing operation",
   "keywords": [
     "arguments",
     "cli",
