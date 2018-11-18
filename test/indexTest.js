@@ -1,15 +1,15 @@
 import dotEvent from "dot-event"
 import dotStore from "dot-store"
-import argv from "../dist/argv"
+import dotArg from "../dist/arg"
 
-test("parse argv (and reload)", async () => {
+test("parse arg and reload", async () => {
   const events = dotEvent()
   const store = dotStore(events)
 
-  argv({ events, store })
+  dotArg({ events, store })
 
-  await events.argv("test", {
-    argv: ["hello", "-w"],
+  await events.arg("test", {
+    arg: ["hello", "-w"],
   })
 
   expect(store.get("test")).toEqual({
@@ -17,10 +17,8 @@ test("parse argv (and reload)", async () => {
     raw: ["hello", "-w"],
   })
 
-  await events.argv("test", {
-    options: {
-      alias: { world: ["w"] },
-    },
+  await events.arg("test", {
+    alias: { world: ["w"] },
   })
 
   expect(store.get("test")).toEqual({
