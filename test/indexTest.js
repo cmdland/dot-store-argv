@@ -9,7 +9,7 @@ test("parse arg and reload", async () => {
   dotArg({ events, store })
 
   await events.argv("test", {
-    arg: ["hello", "-w"],
+    argv: ["hello", "-w"],
   })
 
   expect(store.get("test")).toEqual({
