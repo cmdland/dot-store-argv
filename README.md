@@ -1,4 +1,4 @@
-# dot-arg
+# @dot-event/argv
 
 dot-event argument parsing operation
 

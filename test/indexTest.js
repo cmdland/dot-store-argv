@@ -1,14 +1,14 @@
 import dotEvent from "dot-event"
-import dotStore from "dot-store"
-import dotArg from "../dist/arg"
+import dotStore from "@dot-event/store"
+import dotArg from "../dist/argv"
 
 test("parse arg and reload", async () => {
   const events = dotEvent()
-  const store = dotStore(events)
+  const store = dotStore({ events })
 
   dotArg({ events, store })
 
-  await events.arg("test", {
+  await events.argv("test", {
     arg: ["hello", "-w"],
   })
 
@@ -17,7 +17,7 @@ test("parse arg and reload", async () => {
     raw: ["hello", "-w"],
   })
 
-  await events.arg("test", {
+  await events.argv("test", {
     alias: { world: ["w"] },
   })
 

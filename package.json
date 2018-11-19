@@ -1,5 +1,5 @@
 {
-  "name": "dot-arg",
+  "name": "@dot-event/argv",
   "version": "2.4.0",
   "description": "dot-event argument parsing operation",
   "keywords": [
@@ -47,7 +47,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "dot-event": "2.9.0",
-    "dot-store": "5.5.0",
+    "@dot-event/store": "5.6.0",
     "eslint": "5.8.0",
     "eslint-config-prettier": "3.1.0",
     "eslint-plugin-prettier": "3.0.0",
