@@ -26,3 +26,19 @@ test("parse arg and reload", async () => {
     raw: ["hello", "-w"],
   })
 })
+
+test("camelcase dashes", async () => {
+  const events = dotEvent()
+  const store = dotStore({ events })
+
+  dotArg({ events, store })
+
+  await events.argv("test", {
+    argv: ["--hello-world"],
+  })
+
+  expect(store.get("test")).toEqual({
+    opts: { _: [], "hello-world": true, helloWorld: true },
+    raw: ["--hello-world"],
+  })
+})
