@@ -1,6 +1,6 @@
 import dotEvent from "dot-event"
 import dotStore from "@dot-event/store"
-import dotArg, { argvRelay } from "../dist/argv"
+import dotArg, { argvRelay } from "../"
 
 test("parse arg and reload", async () => {
   const events = dotEvent()
