@@ -4,9 +4,9 @@ import dotArg, { argvRelay } from "../dist/argv"
 
 test("parse arg and reload", async () => {
   const events = dotEvent()
-  const store = dotStore({ events })
 
-  dotArg({ events, store })
+  dotArg({ events })
+  dotStore({ events })
 
   await events.argv("test", {
     argv: ["hello", "-w"],
@@ -14,7 +14,7 @@ test("parse arg and reload", async () => {
 
   const opts = { _: ["hello"], w: true }
 
-  expect(store.get("test")).toEqual({
+  expect(events.get("test")).toEqual({
     argv: {
       opts,
       raw: ["hello", "-w"],
@@ -25,7 +25,7 @@ test("parse arg and reload", async () => {
 
   await events.argv("test", { alias })
 
-  expect(store.get("test")).toEqual({
+  expect(events.get("test")).toEqual({
     argv: {
       alias,
       opts: { ...opts, world: true },
@@ -36,15 +36,15 @@ test("parse arg and reload", async () => {
 
 test("camelcase dashes", async () => {
   const events = dotEvent()
-  const store = dotStore({ events })
 
-  dotArg({ events, store })
+  dotArg({ events })
+  dotStore({ events })
 
   await events.argv("test", {
     argv: ["--hello-world"],
   })
 
-  expect(store.get("test")).toEqual({
+  expect(events.get("test")).toEqual({
     argv: {
       opts: {
         _: [],
