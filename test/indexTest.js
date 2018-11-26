@@ -58,9 +58,9 @@ test("camelcase dashes", async () => {
 
 test("argv relay", async () => {
   const events = dotEvent()
-  const store = dotStore({ events })
 
-  dotArg({ events, store })
+  dotArg({ events })
+  dotStore({ events })
 
   const actions = []
 
